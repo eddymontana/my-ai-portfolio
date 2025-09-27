@@ -1,0 +1,27 @@
+# Created by venv, but we need to keep most files
+# Remove the incorrect '*' line
+
+# Virtual Environment
+venv/
+
+# Local Secrets
+.env
+
+# Local Database
+db.sqlite3
+
+# Django Project-Specific Ignored Directories
+# Where collected static files go in production (WhiteNoise setup)
+/staticfiles/
+/static_root/
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Other Dependencies
+node_modules/
