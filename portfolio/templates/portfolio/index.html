@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title_tag }}
+{% endblock %}
+
+{% block content %}
+<div class="welcome-section">
+    <h2>Hello, I'm {{ name }}</h2>
+    <h3>{{ title_tag }}</h3>
+    <p>{{ summary }}</p>
+    <p>I specialize in combining **Data Science/AI** with **Full-Stack Development** (Django/React) to create intelligent, deployed solutions.</p>
+</div>
+
+<section class="skills-section">
+    <h3>Core Competencies</h3>
+    <ul>
+        <li>**AI/ML/Data Science:** Python, Scikit-learn, Pandas, TensorFlow (Ready for your models!)</li>
+        <li>**Backend (CS50W Focused):** Django, Python, SQL/PostgreSQL, REST APIs.</li>
+        <li>**Frontend:** HTML, CSS, JavaScript, React, Bootstrap.</li>
+        <li>**Mobile:** Flutter (I can build and integrate mobile UIs with this backend!)</li>
+    </ul>
+</section>
+
+<div class="cta-section">
+    <p>Ready to see my work? Check out my <a href="{% url 'microsvc:api_demo' %}">Live AI API Demo</a> (coming soon!).</p>
+</div>
+{% endblock %}

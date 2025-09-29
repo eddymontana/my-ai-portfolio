@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}AI Prediction Microservice Demo{% endblock %}
+
+{% block content %}
+<div class="api-demo-container">
+    <h2>Live AI/ML Prediction Demo</h2>
+    <p>This endpoint simulates a production-ready **Linear Regression** model deployed as a microservice. Enter any number below to get a predicted output (based on the formula: $y = 2x + 10$).</p>
+
+    <div class="input-group">
+        <label for="input-data">Input Feature (x):</label>
+        <input type="number" id="input-data" value="10" step="0.1" required>
+    </div>
+
+    <button id="predict-button">Get Prediction</button>
+
+    <h3>Results:</h3>
+    <div id="results" class="results-box">
+        <p>Click "Get Prediction" to see the output...</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.getElementById('predict-button').addEventListener('click', async () => {
+        const inputData = document.getElementById('input-data').value;
+        const resultsDiv = document.getElementById('results');
+        const apiUrl = '{% url "microsvc:predict_api" %}';
+
+        resultsDiv.innerHTML = '<p>Loading...</p>';
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // IMPORTANT: Django requires the CSRF token for POST requests
+                    'X-CSRFToken': getCookie('csrftoken') 
+                },
+                body: JSON.stringify({ input_feature: inputData })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                resultsDiv.innerHTML = `
+                    <h4>Prediction Successful!</h4>
+                    <p><strong>Input (x):</strong> ${data.input}</p>
+                    <p><strong>Predicted Value (y):</strong> ${data.prediction}</p>
+                    <p><strong>Model:</strong> ${data.model_summary}</p>
+                `;
+            } else {
+                resultsDiv.innerHTML = `<p class="error">API Error: ${data.error || 'Unknown error'}</p>`;
+            }
+        } catch (error) {
+            resultsDiv.innerHTML = `<p class="error">Network Error: Could not reach the API.</p>`;
+            console.error('Fetch error:', error);
+        }
+    });
+
+    // Function to get the CSRF token from cookies (required for Django POST)
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>
+{% endblock %}

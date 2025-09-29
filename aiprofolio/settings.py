@@ -33,11 +33,13 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(',')
 
 # Application definition
 
+
 INSTALLED_APPS = [
-    # Custom Apps will be added here in Phase 2
-    # 'portfolio',
-    # 'microsvc',
-    
+    # Custom Apps
+    # # 3rd Party Apps
+    'rest_framework',  # <-- NEW: Django REST Framework
+    'portfolio',
+    'microsvc',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

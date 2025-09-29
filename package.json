@@ -1,0 +1,17 @@
+{
+  "name": "my_ai_portfolio",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./static/css/tailwind_input.css -o ./static/css/styles.css",
+    "update-db": "npx update-browserslist-db@latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.0"
+  }
+}
