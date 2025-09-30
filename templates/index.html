@@ -1,398 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edidiong Aaron | Full-Stack AI Developer Portfolio</title>
-    <style>
-        /* Base Styles */
-        :root {
-            --primary-color: #4CAF50; /* Green */
-            --secondary-color: #3f51b5; /* Indigo */
-            --background-color: #1a1a2e; /* Dark Blue/Purple */
-            --card-background: #272740;
-            --text-color: #e0e0f0;
-            --accent-color: #ff9800; /* Orange */
-            --font-stack: 'Arial', sans-serif;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edidiong Aaron | Full-Stack AI Developer Portfolio</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #4CAF50; /* Green */
+            --secondary-color: #3f51b5; /* Indigo */
+            --background-color: #1a1a2e; /* Dark Blue/Purple */
+            --card-background: #272740;
+            --text-color: #e0e0f0;
+            --accent-color: #ff9800; /* Orange */
+            --font-stack: 'Arial', sans-serif;
+        }
 
-        body {
-            font-family: var(--font-stack);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-        a:hover {
-            color: var(--accent-color);
-        }
+        a:hover {
+            color: var(--accent-color);
+        }
 
-        /* Header & Navigation */
-        header {
-            background-color: var(--card-background);
-            padding: 1rem 5%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        /* Header & Navigation */
+        header {
+            background-color: var(--card-background);
+            padding: 1rem 5%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
 
-        nav ul li {
-            margin-left: 20px;
-        }
+        nav ul li {
+            margin-left: 20px;
+        }
 
-        nav ul a {
-            color: var(--text-color);
-            font-size: 1rem;
-            padding: 5px 10px;
-            border-bottom: 2px solid transparent;
-        }
+        nav ul a {
+            color: var(--text-color);
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+        }
 
-        nav ul a:hover {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-        }
+        nav ul a:hover {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
 
-        /* Sections */
-        section {
-            padding: 60px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        /* Sections */
+        section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 3px solid var(--secondary-color);
-            display: inline-block;
-            padding-bottom: 5px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-        /* Hero Section */
-        #hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1542831371-29b0f74f9d13') no-repeat center center/cover;
-            background-blend-mode: multiply;
-        }
+        /* Hero Section */
+        #hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1542831371-29b0f74f9d13') no-repeat center center/cover;
+            background-blend-mode: multiply;
+        }
 
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
 
-        .hero-content h3 {
-            font-size: 2.5rem;
-            margin-top: 0;
-            color: var(--primary-color);
-        }
+        .hero-content h3 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
 
-        .hero-content p {
-            font-size: 1.5rem;
-            color: var(--text-color);
-            margin-bottom: 2rem;
-        }
+        .hero-content p {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-        .cta-button:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
-        }
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
 
-        /* About Section */
-        #about {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            padding-top: 20px;
-        }
+        /* About Section */
+        #about {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding-top: 20px;
+        }
 
-        .about-image {
-            flex: 0 0 300px;
-        }
+        .about-image {
+            flex: 0 0 300px;
+        }
 
-        .headshot {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid var(--secondary-color);
-            box-shadow: 0 0 20px rgba(79, 172, 80, 0.5);
-            transition: transform 0.3s;
-        }
+        .headshot {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 0 20px rgba(79, 172, 80, 0.5);
+            transition: transform 0.3s;
+        }
 
-        .headshot:hover {
-            transform: scale(1.05);
-        }
+        .headshot:hover {
+            transform: scale(1.05);
+        }
 
-        .about-text {
-            flex: 1;
-        }
+        .about-text {
+            flex: 1;
+        }
 
-        .skills-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-        .skill-tag {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
+        .skill-tag {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
 
-        /* Projects Section */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+        /* Projects Section */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-        .project-card {
-            background-color: var(--card-background);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+        .project-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(79, 172, 80, 0.5);
-        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(79, 172, 80, 0.5);
+        }
 
-        .project-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
 
-        .project-info {
-            padding: 20px;
-        }
+        .project-info {
+            padding: 20px;
+        }
 
-        .project-info h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
+        .project-info h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
 
-        .project-info p {
-            font-size: 0.95rem;
-            color: #ccc;
-        }
+        .project-info p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
 
-        .project-link {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+        .project-link {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
 
-        /* Footer */
-        footer {
-            background-color: var(--card-background);
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
-            margin-top: 50px;
-        }
+        /* Footer */
+        footer {
+            background-color: var(--card-background);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
 
-        .social-links a {
-            margin: 0 10px;
-            font-size: 1.5rem;
-            color: var(--text-color);
-        }
-        /* Style for Social Icons (Placeholder Text) */
-        .social-links a[title="LinkedIn"]::after { content: 'in'; font-family: Arial, sans-serif; }
-        .social-links a[title="GitHub"]::after { content: 'gh'; font-family: Arial, sans-serif; }
-        .social-links a[title="Twitter"]::after { content: 'tw'; font-family: Arial, sans-serif; }
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+        /* Style for Social Icons (Placeholder Text) */
+        .social-links a[title="LinkedIn"]::after { content: 'in'; font-family: Arial, sans-serif; }
+        .social-links a[title="GitHub"]::after { content: 'gh'; font-family: Arial, sans-serif; }
+        .social-links a[title="Twitter"]::after { content: 'tw'; font-family: Arial, sans-serif; }
 
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            #hero { min-height: 60vh; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .hero-content p { font-size: 1.2rem; }
-            
-            nav { flex-direction: column; }
-            nav ul { margin-top: 15px; }
-            nav ul li { margin: 0 5px; }
-            
-            #about { flex-direction: column; text-align: center; }
-            .about-image { margin-bottom: 20px; }
-            .headshot { width: 200px; height: 200px; }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #hero { min-height: 60vh; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content p { font-size: 1.2rem; }
+            
+            nav { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            nav ul li { margin: 0 5px; }
+            
+            #about { flex-direction: column; text-align: center; }
+            .about-image { margin-bottom: 20px; }
+            .headshot { width: 200px; height: 200px; }
 
-            .skills-list { justify-content: center; }
-        }
-    </style>
+            .skills-list { justify-content: center; }
+        }
+    </style>
 </head>
 <body>
-    
-    <header>
-        <nav>
-            <div class="logo">Full-Stack AI Developer</div>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <header>
+        <nav>
+            <div class="logo">Full-Stack AI Developer</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h3>Edidiong Aaron</h3>
-            <h1>Building Intelligent Solutions.</h1>
-            <p>Data Scientist, AI/ML Engineer, and Full-Stack Developer leveraging Flutter & Make.com.</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-    </section>
+    <section id="hero">
+        <div class="hero-content">
+            <h3>Edidiong Aaron</h3>
+            <h1>Building Intelligent Solutions.</h1>
+            <p>Data Scientist, AI/ML Engineer, and Full-Stack Developer leveraging Flutter & Make.com.</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-image">
-            <img 
-                src="https://imgur.com/x3XoNjT.png" 
-                alt="Edidiong Aaron Headshot" 
-                class="headshot"
-            >
-        </div>
-        <div class="about-text">
-            <p>
-                As a dedicated **Data Scientist** and **AI/ML Engineer**, I specialize in transforming raw data into practical, predictive models. My expertise spans the entire machine learning lifecycle, from **prompt engineering** and model optimization to deployment.
-            </p>
-            <p>
-                Beyond the backend, I leverage my skills in **Web Development** and as a **Flutter Developer** to create robust applications. I am an **Advanced Automation Expert (make.com)**, designing powerful integration pipelines to ensure my intelligent systems have seamless real-world connectivity. I am a proven Google Developer committed to clean code and scalable architecture.
-            </p>
-            <h3>Core Skills</h3>
-            <ul class="skills-list">
-                <li class="skill-tag">AI/ML Engineering</li>
-                <li class="skill-tag">Data Science</li>
-                <li class="skill-tag">Prompt Engineering</li>
-                <li class="skill-tag">Web Development</li>
-                <li class="skill-tag">**Automation (make.com)**</li>
-                <li class="skill-tag">Flutter/Dart</li>
-                <li class="skill-tag">Python (TensorFlow/PyTorch)</li>
-            </ul>
-        </div>
-    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-image">
+            <img 
+                src="https://imgur.com/x3XoNjT.png" 
+                alt="Edidiong Aaron Headshot" 
+                class="headshot"
+            >
+        </div>
+        <div class="about-text">
+            <p>
+                As a dedicated **Data Scientist** and **AI/ML Engineer**, I specialize in transforming raw data into practical, predictive models. My expertise spans the entire machine learning lifecycle, from **prompt engineering** and model optimization to deployment.
+            </p>
+            <p>
+                Beyond the backend, I leverage my skills in **Web Development** and as a **Flutter Developer** to create robust applications. I am an **Advanced Automation Expert (make.com)**, designing powerful integration pipelines to ensure my intelligent systems have seamless real-world connectivity. I am a proven Google Developer committed to clean code and scalable architecture.
+            </p>
+            <h3>Core Skills</h3>
+            <ul class="skills-list">
+                <li class="skill-tag">AI/ML Engineering</li>
+                <li class="skill-tag">Data Science</li>
+                <li class="skill-tag">Prompt Engineering</li>
+                <li class="skill-tag">Web Development</li>
+                <li class="skill-tag">**Automation (make.com)**</li>
+                <li class="skill-tag">Flutter/Dart</li>
+                <li class="skill-tag">Python (TensorFlow/PyTorch)</li>
+            </ul>
+        </div>
+    </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
 
-            <div class="project-card">
-                <img 
-                    src="https://imgur.com/ONQxmFh.png" 
-                    alt="Multi-Tool LLM Agent Framework" 
-                    class="project-image"
-                >
-                <div class="project-info">
-                    <h3>Multi-Tool LLM Agent Framework (Streamlit)</h3>
-                    <p>Designed and implemented a modular AI agent capable of using multiple external APIs (Google Search, Calculator, Database) to execute complex, multi-step user requests. Optimized for minimal latency and high accuracy via structured prompting.</p>
-                    <a href="https://github.com/eddymontana/intelligent-chatbot-streamlit" class="project-link" target="_blank">View GitHub Repo &rarr;</a>
-                </div>
-            </div>
+            <div class="project-card">
+                <img 
+                    src="https://imgur.com/ONQxmFh.png" 
+                    alt="Multi-Tool LLM Agent Framework" 
+                    class="project-image"
+                >
+                <div class="project-info">
+                    <h3>Multi-Tool LLM Agent Framework (Streamlit)</h3>
+                    <p>Designed and implemented a modular AI agent capable of using multiple external APIs (Google Search, Calculator, Database) to execute complex, multi-step user requests. Optimized for minimal latency and high accuracy via structured prompting.</p>
+                    <a href="https://github.com/eddymontana/intelligent-chatbot-streamlit" class="project-link" target="_blank">View GitHub Repo &rarr;</a>
+                </div>
+            </div>
 
-            <div class="project-card">
-                <img 
-                    src="https://imgur.com/iJth3lf.png" 
-                    alt="Cosine Similarity Recommendation System" 
-                    class="project-image"
-                >
-                <div class="project-info">
-                    <h3>Cosine Similarity Recommendation System</h3>
-                    <p>Built a collaborative filtering recommendation system using pure Python and Cosine Similarity. Optimized for fast matrix operations to provide relevant, personalized content suggestions based on user preference data.</p>
-                    <a href="https://github.com/eddymontana/cosine-similarity" class="project-link" target="_blank">View GitHub Repo &rarr;</a>
-                </div>
-            </div>
+            <div class="project-card">
+                <img 
+                    src="https://imgur.com/iJth3lf.png" 
+                    alt="Cosine Similarity Recommendation System" 
+                    class="project-image"
+                >
+                <div class="project-info">
+                    <h3>Cosine Similarity Recommendation System</h3>
+                    <p>Built a collaborative filtering recommendation system using pure Python and Cosine Similarity. Optimized for fast matrix operations to provide relevant, personalized content suggestions based on user preference data.</p>
+                    <a href="https://github.com/eddymontana/cosine-similarity" class="project-link" target="_blank">View GitHub Repo &rarr;</a>
+                </div>
+            </div>
 
-            <div class="project-card">
-                <img 
-                    src="https://imgur.com/B2sbHRm.png" 
-                    alt="Cross-Platform Portfolio App (Flutter)" 
-                    class="project-image"
-                >
-                <div class="project-info">
-                    <h3>Cross-Platform Portfolio App (Flutter)</h3>
-                    <p>Developed a responsive, native-looking mobile application using Flutter and Dart to showcase projects and skills. Focus on clean UI/UX and efficient state management for cross-platform deployment.</p>
-                    <a href="https://github.com/eddymontana/my-portfolio" class="project-link" target="_blank">View GitHub Repo &rarr;</a>
-                </div>
-            </div>
+            <div class="project-card">
+                <img 
+                    src="https://imgur.com/B2sbHRm.png" 
+                    alt="Cross-Platform Portfolio App (Flutter)" 
+                    class="project-image"
+                >
+                <div class="project-info">
+                    <h3>Cross-Platform Portfolio App (Flutter)</h3>
+                    <p>Developed a responsive, native-looking mobile application using Flutter and Dart to showcase projects and skills. Focus on clean UI/UX and efficient state management for cross-platform deployment.</p>
+                    <a href="https://github.com/eddymontana/my-portfolio" class="project-link" target="_blank">View GitHub Repo &rarr;</a>
+                </div>
+            </div>
 
-        </div>
-    </section>
+        </div>
+    </section>
 
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p style="text-align: center;">I'm currently open to new challenging projects. Let's connect!</p>
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="mailto:darklordyng@gmail.com" class="cta-button">Email Me</a>
-        </div>
-    </section>
+    <section id="contact">
+                <div id="backend-status" style="text-align: center; margin-bottom: 20px;">
+            <p style="font-weight: bold; color: var(--accent-color);">Backend Status:</p>
+            <span id="status-message" style="background-color: var(--card-background); padding: 8px 15px; border-radius: 5px;">
+                Checking API...
+            </span>
+        </div>
+                <h2>Get In Touch</h2>
+        <p style="text-align: center;">I'm currently open to new challenging projects. Let's connect!</p>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="mailto:darklordyng@gmail.com" class="cta-button">Email Me</a>
+        </div>
+    </section>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/edidiong-aaron-533459115" title="LinkedIn" target="_blank"></a>
-            <a href="https://github.com/eddymontana" title="GitHub" target="_blank"></a>
-            <a href="https://twitter.com/ammaddeuss" title="Twitter" target="_blank"></a>
-        </div>
-        <p>&copy; 2025 Edidiong Aaron | Full-Stack AI Portfolio. Built with clean code practices.</p>
-    </footer>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/edidiong-aaron-533459115" title="LinkedIn" target="_blank"></a>
+            <a href="https://github.com/eddymontana" title="GitHub" target="_blank"></a>
+            <a href="https://twitter.com/ammaddeuss" title="Twitter" target="_blank"></a>
+        </div>
+        <p>&copy; 2025 Edidiong Aaron | Full-Stack AI Portfolio. Built with clean code practices.</p>
+    </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const statusElement = document.getElementById('status-message');
+        // Use a relative path to ensure it works on Render's domain
+        const apiURL = '/api/status'; 
+
+        fetch(apiURL)
+            .then(response => {
+                // Check if the response is valid (status 200-299)
+                if (!response.ok) {
+                    throw new Error('API is down or returned an error.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Success: Update the status message with the API's own message
+                statusElement.textContent = data.message;
+                // Change style to reflect success (using the primary color for a green indicator)
+                statusElement.style.backgroundColor = 'var(--primary-color)'; 
+                statusElement.style.color = 'white';
+            })
+            .catch(error => {
+                // Failure: Display an error message
+                statusElement.textContent = 'Backend API check failed.';
+                statusElement.style.backgroundColor = 'red';
+                statusElement.style.color = 'white';
+                console.error('API Error:', error);
+            });
+    });
+</script>
 </body>
 </html>
