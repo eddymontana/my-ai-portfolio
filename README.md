@@ -27,8 +27,5 @@ My work focuses on bridging the gap between data science models and practical, s
 
 | Platform | Link |
 | :--- | :--- |
-| **LinkedIn** | [Edidiong Aaron](https://www.linkedin.com/in/edidiong-aaron-533459115) |
 | **GitHub** | [eddymontana](https://github.com/eddymontana) |
-| **Email** 
-| **Twitter (X)** 
 '' 
